@@ -1,0 +1,44 @@
+<html>
+  <header>
+    <style>
+      body {
+        background: #070707;
+      }
+      #fire {
+        display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	font-family: sans-serif;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      table tr td {
+        width: 5px;
+	height: 5px;
+      }
+      table tr td.debug-mode {
+        border: 1px solid #eee;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+	width: 10px;
+	height: 10px;
+      }
+      table tr td > * {
+        position: absolute;
+	top: 2px;
+	right: 2px;
+	font-size: 10px;
+	color: #aaa;
+      }
+    </style>
+  </header>
+  <body>
+    <div id="fire"></div>
+    <script src="palette.js"></script>
+    <script src="fire.js"></script>
+  </body>
+  </html>
