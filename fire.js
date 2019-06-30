@@ -30,8 +30,8 @@ function calculatesPropagation() {
       const bottomPosition = position + canvas.columns;
       const rightPosition = position + 1;
       if (canvas.grid[bottomPosition]) { 
-        const decay = randomNumberAt(3);
-	const decay2 = randomNumberAt();
+        const decay = randomNumberAt();
+	const decay2 = randomNumberAt(3);
 	const index = (position - decay) || 0;
 	const newValue = (canvas.grid[bottomPosition] - decay2) || 0;
         canvas.grid[index] = newValue;
@@ -41,7 +41,7 @@ function calculatesPropagation() {
 }
 
 function randomNumberAt(number = 2) {
-  return Math.ceil(Math.random() * number);
+  return Math.floor(Math.random() * number);
 }
 
 function render() {
