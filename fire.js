@@ -28,12 +28,11 @@ function calculatesPropagation() {
     const nextRowFirstPosition = currentRowFirstPosition + canvas.columns;
     for (let position = currentRowFirstPosition; position < nextRowFirstPosition; ++position) {
       const bottomPosition = position + canvas.columns;
-      const rightPosition = position + 1;
       if (canvas.grid[bottomPosition]) { 
         const decay = randomNumberAt();
-	const decay2 = randomNumberAt(3);
-	const index = (position - decay) || 0;
-	const newValue = (canvas.grid[bottomPosition] - decay2) || 0;
+        const decay2 = randomNumberAt(3);
+        const index = (position - decay) || 0;
+        const newValue = (canvas.grid[bottomPosition] - decay2) || 0;
         canvas.grid[index] = newValue;
       }
     }
@@ -56,7 +55,7 @@ function render() {
       if (debug) {
         html += `<td style="background:${colorHex}" class="debug-mode"><span>${fireForce}<span></td>`;
       } else {
-	html += `<td style="background:${colorHex}"></td>`;
+	      html += `<td style="background:${colorHex}"></td>`;
       }
     }
     html += '</tr>';
